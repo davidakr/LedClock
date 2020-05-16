@@ -1,0 +1,25 @@
+.Home {
+  margin-top: 5%;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.red {
+  background: #f00;
+}
+
+.green {
+  background: #0f0;
+}
+
+.blue {
+  background: #00f;
+}
+
+.LED {
+  line-height: 40px;
+}
