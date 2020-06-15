@@ -6,7 +6,6 @@
   width: 20px;
   height: 20px;
   border: 1px solid black;
-
 }
 
 #brightness{
@@ -18,7 +17,7 @@
   padding-bottom: 20px;
   text-align: center;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 5%;
   margin-bottom: 10px;
 }
 
@@ -27,7 +26,7 @@
   padding-bottom: 20px;
   text-align: center;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5%;
   margin-bottom: 10px;
 
 }
@@ -37,7 +36,7 @@
   padding-bottom: 20px;
   text-align: center;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5%;
   margin-bottom: 10px;
 }
 
@@ -70,5 +69,5 @@
 }
 
 .ctrlBtns {
-  padding-top: 6px;
+  padding-top: 20%;
 }
