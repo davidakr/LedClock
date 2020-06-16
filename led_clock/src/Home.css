@@ -3,8 +3,7 @@
 }
 
 .box {
-  width: 20px;
-  height: 20px;
+  height: 5%;
   border: 1px solid black;
 }
 
@@ -14,30 +13,30 @@
 
 #red {
   background: #ff9999;
-  padding-bottom: 20px;
+  padding-bottom: 6%;
   text-align: center;
   border-radius: 10px;
   margin-top: 5%;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
 #green {
   background: #99ffaf;
-  padding-bottom: 20px;
+  padding-bottom: 6%;
   text-align: center;
   border-radius: 10px;
   margin-top: 5%;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 
 }
 
 #blue {
   background: #7a9cff;
-  padding-bottom: 20px;
+  padding-bottom: 6%;
   text-align: center;
   border-radius: 10px;
   margin-top: 5%;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
 #red_rgb {
@@ -62,10 +61,8 @@
   width: 90%;
   margin-left: 5%;
   color:black;
-}
-
-.LED {
-  line-height: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .ctrlBtns {
