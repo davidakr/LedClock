@@ -64,7 +64,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <Container maxWidth="xs">
-          <Grid container spacing={1}>
+          <Grid container direction={'row'} spacing={1}>
             <Grid item xs={10}>
               Status
             </Grid>
@@ -90,10 +90,12 @@ class Home extends React.Component {
                 onChange={this.handleChange}
               />
             </Grid>
+            <Grid item xs={12}>
+              <Divider />
+            </Grid>
             <Grid id="brightness" item xs={12}>
               Brightness
             </Grid>
-
             <Grid item xs={12}>
               <Slider
                 id="brightness_slider"
@@ -115,33 +117,27 @@ class Home extends React.Component {
             <Grid item xs={12}>
               <Divider />
             </Grid>
-            <Grid container spacing={1}>
-              <Grid id="red" className="box" item xs={12}>
-                Red
-              </Grid>
-              <Grid item xs={12}>
-                <Slider
-                  id="red_rgb"
-                  value={this.state.red_rgb}
-                  aria-labelledby="continuous-slider"
-                  min={0}
-                  max={255}
-                  onChange={(event, value) => {
-                    this.setState({ red_rgb: value });
-                  }}
-                  onChangeCommitted={(event, value) => {
-                    this.setState({ red_rgb: value }, () => {
-                      this.props.requestClockUpdate(this.setURL());
-                    });
-                  }}
-                />
-              </Grid>
+            <Grid id="brightness" item xs={12}>
+              Color
             </Grid>
-            <Grid container spacing={1}>
-              <Grid id="green" className="box" item xs={12}>
-                Green
-              </Grid>
-              <Grid item xs={12}>
+            <Grid id="red_border" item xs={12}>
+              <Slider
+                id="red_rgb"
+                value={this.state.red_rgb}
+                aria-labelledby="continuous-slider"
+                min={0}
+                max={255}
+                onChange={(event, value) => {
+                  this.setState({ red_rgb: value });
+                }}
+                onChangeCommitted={(event, value) => {
+                  this.setState({ red_rgb: value }, () => {
+                    this.props.requestClockUpdate(this.setURL());
+                  });
+                }}
+              />
+            </Grid>
+            <Grid id="green_border" item xs={12}>
                 <Slider
                   id="green_rgb"
                   value={this.state.green_rgb}
@@ -157,29 +153,23 @@ class Home extends React.Component {
                     });
                   }}
                 />
-              </Grid>
             </Grid>
-            <Grid container spacing={1}>
-              <Grid id="blue" className="box" item xs={12}>
-                Blue
-              </Grid>
-              <Grid item xs={12}>
-                <Slider
-                  id="blue_rgb"
-                  value={this.state.blue_rgb}
-                  aria-labelledby="continuous-slider"
-                  min={0}
-                  max={255}
-                  onChange={(event, value) => {
-                    this.setState({ blue_rgb: value });
-                  }}
-                  onChangeCommitted={(event, value) => {
-                    this.setState({ blue_rgb: value }, () => {
-                      this.props.requestClockUpdate(this.setURL());
-                    });
-                  }}
-                />
-              </Grid>
+            <Grid id="blue_border" item xs={12}>
+              <Slider
+                id="blue_rgb"
+                value={this.state.blue_rgb}
+                aria-labelledby="continuous-slider"
+                min={0}
+                max={255}
+                onChange={(event, value) => {
+                  this.setState({ blue_rgb: value });
+                }}
+                onChangeCommitted={(event, value) => {
+                  this.setState({ blue_rgb: value }, () => {
+                    this.props.requestClockUpdate(this.setURL());
+                  });
+                }}
+              />
             </Grid>
           </Grid>
         </Container>
