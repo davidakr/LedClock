@@ -76,9 +76,6 @@ class Home extends React.Component {
                 onChange={this.handleChange}
               />
             </Grid>
-            <Grid item xs={12}>
-              <Divider />
-            </Grid>
             <Grid item xs={10}>
               Light Sensor
             </Grid>
