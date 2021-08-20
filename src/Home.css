@@ -1,0 +1,99 @@
+.Home {
+  margin-top: 10%;
+}
+
+.box {
+  height: 5%;
+  border: 1px solid black;
+}
+
+#brightness {
+  text-align: center;
+}
+
+#red {
+  background: #ff9999;
+  padding-bottom: 6%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#green {
+  background: #99ffaf;
+  padding-bottom: 6%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#blue {
+  background: #7a9cff;
+  padding-bottom: 6%;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#red_border {
+  border: 5px solid red;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background: #ff9999;
+}
+#green_border {
+  border: 5px solid green;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background: #99ffaf;
+}
+#blue_border {
+  border: 5px solid blue;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background: #91abf8;
+}
+
+#red_rgb {
+  width: 90%;
+  margin-left: 5%;
+  color: black;
+  height: 100%;
+}
+
+#green_rgb {
+  width: 90%;
+  margin-left: 5%;
+  color: black;
+  height: 100%;
+}
+
+#blue_rgb {
+  width: 90%;
+  margin-left: 5%;
+  color: black;
+  height: 100%;
+}
+
+#brightness_slider {
+  width: 90%;
+  margin-left: 5%;
+  color: black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.ctrlBtns {
+  padding-top: 20%;
+}
+#bottom_menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
