@@ -4,7 +4,7 @@ import axios from "axios";
 import Login from "./Login";
 import Home from "./Home";
 import Menu from "./Menu";
-import Alert from '@material-ui/lab/Alert';
+import Banner from "./Banner";
 
 class App extends React.Component {
   constructor(props) {
@@ -62,7 +62,7 @@ class App extends React.Component {
           }
         })
         .catch((error) => {
-          this.setState({ lastLoginFailed: true, isLoading: false, loggedIn: false});
+          this.setState({ lastLoginFailed: true, isLoading: false, loggedIn: false });
         });
     } else if (this.state.firstTry) {
       localStorage.removeItem("ip");
@@ -76,36 +76,23 @@ class App extends React.Component {
   }
 
   render() {
-    if (this.state.menu === "home") {
-      return (
-        <div>
-          {!this.state.loggedIn && <Alert severity="error">Connection not yet established!</Alert>}
-          <Home
-            data={this.state.data}
-            requestClockUpdate={this.requestClockUpdate}
-            loggedIn={this.state.loggedIn}
-          />
-          <Menu
-            setMenu={this.setMenu}
-          />
-        </div>
-
-      );
-    } else {
-      return (
-        <div>
-          {!this.state.loggedIn && <Alert severity="error">Connection not yet established!</Alert>}
-          <Login
-            isLoading={this.state.isLoading}
-            loggedIn={this.state.loggedIn}
-            setIp={this.setIp}
-          />
-          <Menu
-            setMenu={this.setMenu}
-          />
-        </div>
-      );
-    }
+    return (
+      <div>
+        {!this.state.loggedIn && <Banner />}
+        {this.state.menu === "home" ? <Home
+          data={this.state.data}
+          requestClockUpdate={this.requestClockUpdate}
+          loggedIn={this.state.loggedIn}
+        /> : <Login
+          isLoading={this.state.isLoading}
+          loggedIn={this.state.loggedIn}
+          setIp={this.setIp}
+        />}
+        <Menu
+          setMenu={this.setMenu}
+        />
+      </div>
+    );
   }
 }
 

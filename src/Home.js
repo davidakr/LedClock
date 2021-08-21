@@ -6,7 +6,6 @@ import Slider from "@material-ui/core/Slider";
 import Container from "@material-ui/core/Container";
 import Divider from "@material-ui/core/Divider";
 
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -136,21 +135,21 @@ class Home extends React.Component {
               />
             </Grid>
             <Grid id="green_border" item xs={12}>
-                <Slider
-                  id="green_rgb"
-                  value={this.state.green_rgb}
-                  aria-labelledby="continuous-slider"
-                  min={0}
-                  max={255}
-                  onChange={(event, value) => {
-                    this.setState({ green_rgb: value });
-                  }}
-                  onChangeCommitted={(event, value) => {
-                    this.setState({ green_rgb: value }, () => {
-                      this.props.requestClockUpdate(this.setURL());
-                    });
-                  }}
-                />
+              <Slider
+                id="green_rgb"
+                value={this.state.green_rgb}
+                aria-labelledby="continuous-slider"
+                min={0}
+                max={255}
+                onChange={(event, value) => {
+                  this.setState({ green_rgb: value });
+                }}
+                onChangeCommitted={(event, value) => {
+                  this.setState({ green_rgb: value }, () => {
+                    this.props.requestClockUpdate(this.setURL());
+                  });
+                }}
+              />
             </Grid>
             <Grid id="blue_border" item xs={12}>
               <Slider
